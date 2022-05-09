@@ -20,7 +20,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Build folder
-/dist
 .docs
 .yarnrc
 .npmrc
