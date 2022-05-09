@@ -1,6 +1,6 @@
 {
   "name": "react-tabs",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "dependencies": {
     "@feuer/react-tabs": "*",
