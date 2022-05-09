@@ -15,6 +15,7 @@ class TabProvider extends React.Component {
   props: {
     activeTab: any;
     children: any;
+    onClick: any;
   };
 
   state = {
@@ -32,6 +33,7 @@ class TabProvider extends React.Component {
           tabs: prevState.tabs.concat(tab)
         };
       });
+      this.props.onClick()
     }
   };
 
