@@ -51,6 +51,7 @@ class TabProvider extends React.Component {
         activeTab: tab
       };
     });
+    console.log(this.props.onClick);
     this.props.onClick()
   };
 
