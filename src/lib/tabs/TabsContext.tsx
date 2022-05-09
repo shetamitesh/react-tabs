@@ -33,7 +33,6 @@ class TabProvider extends React.Component {
           tabs: prevState.tabs.concat(tab)
         };
       });
-      this.props.onClick()
     }
   };
 
@@ -52,6 +51,7 @@ class TabProvider extends React.Component {
         activeTab: tab
       };
     });
+    this.props.onClick()
   };
 
   render() {
