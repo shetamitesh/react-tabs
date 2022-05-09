@@ -98,7 +98,8 @@ class Tabs extends React.Component {
     tabsProps: {
       style?: React.Validator<Object>;
       className?: React.Validator<string>;
-    }
+    };
+    onClick: React.Validator<any>;
   };
 
   props: {
@@ -107,7 +108,8 @@ class Tabs extends React.Component {
     tabsProps?: {
       style?: CSSProperties;
       className?: string;
-    }
+    };
+    onClick: (event: React.MouseEvent<HTMLElement>) => void;
   };
 
   state = {
@@ -130,7 +132,7 @@ class Tabs extends React.Component {
     const tabsProps = this.props.tabsProps || {};
 
     return (
-      <TabProvider activeTab={this.props.activeTab}>
+      <TabProvider activeTab={this.props.activeTab} onClick={this.props.onClick}>
         <TabConsumer>
           {value => (
             <ReactTabs>
@@ -195,7 +197,8 @@ Tabs.propTypes = {
   tabsProps: {
     style: PropTypes.object,
     className: PropTypes.string
-  }
+  },
+  onClick: PropTypes.func
 };
 
 export default Tabs;
